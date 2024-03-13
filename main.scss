@@ -1,1 +1,68 @@
+html,
+body {
+	font-family: Arial, sans-serif;
+}
 
+.people {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.person {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.photo {
+	position: relative;
+}
+
+.photo img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.rank {
+	position: absolute;
+	top: 84px;
+	right: 5px;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	color: #8b0000;
+}
+
+.details .name {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.details .extra {
+	font-size: 0.8em;
+	margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+	.people {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.details .name {
+		font-size: 1.2em;
+	}
+
+	.details .extra {
+		font-size: 1em;
+	}
+}
